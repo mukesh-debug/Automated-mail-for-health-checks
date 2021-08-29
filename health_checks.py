@@ -7,7 +7,7 @@ import shutil
 def cpu_usage():
     """Returns False if cpu usage is equal to or over 80%"""
     usage=psutil.cpu_percent(1)
-    return usage<0.8:
+    return usage<0.8
 
 def disk_free():
     """Returns False if disk space available in system partition is less than 20%"""
@@ -21,5 +21,5 @@ def free_memory():
     return (vm.available/1024**2)>500
 if __name__=='__main__':
     print('cpu usage within limits: ', cpu_usage())
-    print('enough disk space available: ', disk_free())
+    print('Enough disk space available: ', disk_free())
     print('Physical memory available is more than or equal to 500 MB : ', free_memory())
