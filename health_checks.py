@@ -19,3 +19,7 @@ def free_memory():
     """Returns false if physical memory available is less than 500 MegaBytes"""
     vm=psutil.virtual_memory()
     return (vm.available/1024**2)>500
+if __name__=='__main__':
+    print('cpu usage within limits: ', cpu_usage())
+    print('enough disk space available: ', disk_free())
+    print('Physical memory available is more than or equal to 500 MB : ', free_memory())
