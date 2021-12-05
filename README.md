@@ -5,11 +5,9 @@ there will be threshold for all types of data, and if actual data exceeds the th
 an email wil be sent to the administrator to check for the error.
 
 To check if the health_checks.py script works correctly we can either use a test script file or manually run 'stress' tool to stress the use of resources and execute the script.
-guidelines on using stress tool:
-$sudo apt install stress #to install the tool if not available
-$stress --cpu 8 #calling the tool using a good number of cpus to fully load the cpu resources
+##guidelines on using stress tool:
+To install the tool if not available execute `$sudo apt install stress ` in terminal
+To call the tool using a good number of cpus to fully load the cpu resources execute `$stress --cpu 8 `
 
 To make the health_checks.py execute regularly such as services do we need to setup a cron job which would execute the script after a specified period of time.
-To set a user cron job:
-$crontab -e
-enter appropriate choice then set the absolute path for health_checks.py script and save the file.
+To set a user cron job: `$crontab -e` and enter appropriate choice then set the absolute path for health_checks.py script and save the file.
