@@ -8,6 +8,8 @@ To check if the health_checks.py script works correctly we can either use a test
 guidelines on using stress tool:
 $sudo apt install stress #to install the tool if not available
 $stress --cpu 8 #calling the tool using a good number of cpus to fully load the cpu resources
+$stress -vm 6 --vm-bytes 1024M --vm-hang 10  
+(here physical memory is put under stress, use appropriate parameters depending on your memory size, here 8GB memory is taken in account and 6 GB of additional stress is put on it for 10 sec interval.)
 
 To make the health_checks.py execute regularly such as services do we need to setup a cron job which would execute the script after a specified period of time.
 To set a user cron job:
